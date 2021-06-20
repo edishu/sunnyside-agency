@@ -4,9 +4,16 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Barlow", "Fraunces", "ui-sans-serif", "system-ui"]
+      sans: ["ui-sans-serif", "system-ui"],
+      barlow: ["Barlow", "ui-sans-serif", "system-ui"],
+      fraunces: ["Fraunces", "ui-sans-serif", "system-ui"]
     },
-    extend: {}
+    extend: {
+      colors: {
+        footerCyan: "rgb(144, 212, 197)",
+        footerTxt: "rgb(44, 115, 99)"
+      }
+    }
   },
   variants: {
     extend: {}
