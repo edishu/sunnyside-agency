@@ -11,7 +11,11 @@ module.exports = {
     extend: {
       colors: {
         footerCyan: "rgb(144, 212, 197)",
-        footerTxt: "rgb(44, 115, 99)"
+        footerTxt: "rgb(44, 115, 99)",
+        testimonialCream: "rgb(255, 251, 248)",
+        grayBlue: "hsl(210, 4%, 67%)",
+        drkGrayBlue: "hsl(213, 9%, 39%)",
+        desatBlue: "hsl(212, 27%, 19%)"
       }
     }
   },
