@@ -11,7 +11,7 @@ export default function Home() {
     };
   });
   return (
-    <div className="min-h-screen text-lg mx-auto container">
+    <div className="min-h-screen text-lg xl:mx-auto xl:container">
       <Head>
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
