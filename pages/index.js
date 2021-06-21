@@ -11,11 +11,42 @@ export default function Home() {
     };
   });
   return (
-    <div className="min-h-screen text-lg">
+    <div className="min-h-screen text-lg mx-auto container">
       <Head>
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
+      <article className="sm:flex">
+        <figure className="relative">
+          <img
+            src={`/${
+              winWidth >= 648 ? "desktop" : "mobile"
+            }/image-graphic-design.jpg`}
+          ></img>
+          <figcaption className="absolute top-2/3 sm:top-1/3 md:top-1/2 lg:top-2/3 text-center text-desatCayn mx-auto container">
+            <h2 className="font-fraunces text-2xl mb-6">Graphic Design</h2>
+            <p className="text-base font-barlow px-4 lg:px-12">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </figcaption>
+        </figure>
+        <figure className="relative">
+          <img
+            src={`/${
+              winWidth >= 648 ? "desktop" : "mobile"
+            }/image-photography.jpg`}
+          ></img>
+          <figcaption className="absolute top-2/3 sm:top-1/3 md:top-1/2 lg:top-2/3 text-center text-desatCayn mx-auto container">
+            <h2 className="font-fraunces text-2xl mb-6">Photography</h2>
+            <p className="text-base font-barlow px-4 lg:px-12">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </figcaption>
+        </figure>
+      </article>
       <article className="py-12 bg-testimonialCream">
         <h2 className="text-center text-grayBlue font-fraunces font-bold uppercase mb-20">
           Client Testimonials
