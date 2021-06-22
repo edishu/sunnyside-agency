@@ -16,11 +16,36 @@ export default function Home() {
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
+      <article className="sm:flex sm:flex-row-reverse">
+        <img
+          src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-transform.jpg`}
+          className="sm:w-1/2"
+        ></img>
+        <Feature
+          heading="Transform your brand"
+          para="We are a full-service creative agency specializing in helping brands grow fast. 
+          Engage your clients through compelling visuals that do most of the marketing for you."
+          linkColor="bg-brndYellow"
+        />
+      </article>
+      <article className="sm:flex">
+        <img
+          src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-stand-out.jpg`}
+          className="sm:w-1/2"
+        ></img>
+        <Feature
+          heading="Stand out to the right audience"
+          para="Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places."
+          linkColor="bg-softRed"
+        />
+      </article>
       <article className="sm:flex">
         <figure className="relative">
           <img
             src={`/${
-              winWidth >= 648 ? "desktop" : "mobile"
+              winWidth >= 640 ? "desktop" : "mobile"
             }/image-graphic-design.jpg`}
           ></img>
           <figcaption className="absolute top-2/3 sm:top-1/3 md:top-1/2 lg:top-2/3 text-center text-desatCayn mx-auto container">
@@ -35,7 +60,7 @@ export default function Home() {
         <figure className="relative">
           <img
             src={`/${
-              winWidth >= 648 ? "desktop" : "mobile"
+              winWidth >= 640 ? "desktop" : "mobile"
             }/image-photography.jpg`}
           ></img>
           <figcaption className="absolute top-2/3 sm:top-1/3 md:top-1/2 lg:top-2/3 text-center text-desatCayn mx-auto container">
@@ -80,25 +105,25 @@ export default function Home() {
       <article className="flex flex-wrap">
         <img
           src={`/${
-            winWidth >= 648 ? "desktop" : "mobile"
+            winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-milkbottles.jpg`}
           className="w-1/2 sm:w-1/4"
         ></img>
         <img
           src={`/${
-            winWidth >= 648 ? "desktop" : "mobile"
+            winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-orange.jpg`}
           className="w-1/2 sm:w-1/4"
         ></img>
         <img
           src={`/${
-            winWidth >= 648 ? "desktop" : "mobile"
+            winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-cone.jpg`}
           className="w-1/2 sm:w-1/4"
         ></img>
         <img
           src={`/${
-            winWidth >= 648 ? "desktop" : "mobile"
+            winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-sugar-cubes.jpg`}
           className="w-1/2 sm:w-1/4"
         ></img>
@@ -136,6 +161,30 @@ const ClientTestimony = ({ imgUrl, para, name, desig }) => {
         {name}
       </h3>
       <h4 className="text-grayBlue font-barlow mb-20">{desig}</h4>
+    </div>
+  );
+};
+
+const Feature = ({ heading, para, linkColor }) => {
+  return (
+    <div className="text-center sm:text-left bg-testimonialCream py-14 px-10 sm:py-28 sm:px-24">
+      <h2 className="text-3xl text-desatBlue font-black font-fraunces mb-8">
+        {heading}
+      </h2>
+      <p className="font-barlow text-grayisBlue mb-8">{para}</p>
+      <div className="flex flex-col items-center sm:items-start">
+        <a
+          href="#"
+          className="text-desatBlue font-fraunces font-black text-base uppercase z-20"
+        >
+          Learn more
+        </a>
+        <span
+          className={`${linkColor} h-3 rounded-full -mt-3 z-10 font-fraunces uppercase text-desatBlue text-opacity-0`}
+        >
+          Learn More
+        </span>
+      </div>
     </div>
   );
 };
