@@ -16,11 +16,15 @@ export default function Home() {
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
-      <article>
+      <section>
         <figure className="relative">
-          <img
-            src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-header.jpg`}
-          ></img>
+          <picture>
+            <source
+              srcset="/desktop/image-header.jpg"
+              media="(min-width: 640px)"
+            />
+            <img src="/mobile/image-header.jpg" alt="Hero " />
+          </picture>
           <figcaption className="absolute top-1/4 left-1/2 -translate-x-1/2 flex flex-col items-center">
             <h1 className="text-4xl text-center uppercase text-white font-fraunces mb-20">
               We Are Creatives
@@ -28,8 +32,8 @@ export default function Home() {
             <img src="/icon-arrow-down.svg"></img>
           </figcaption>
         </figure>
-      </article>
-      <article className="sm:flex sm:flex-row-reverse">
+      </section>
+      <section className="sm:flex sm:flex-row-reverse">
         <img
           src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-transform.jpg`}
           className="sm:w-1/2"
@@ -40,8 +44,8 @@ export default function Home() {
           Engage your clients through compelling visuals that do most of the marketing for you."
           linkColor="bg-brndYellow"
         />
-      </article>
-      <article className="sm:flex">
+      </section>
+      <section className="sm:flex">
         <img
           src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-stand-out.jpg`}
           className="sm:w-1/2"
@@ -53,8 +57,8 @@ export default function Home() {
             extend your brand in digital places."
           linkColor="bg-softRed"
         />
-      </article>
-      <article className="sm:flex">
+      </section>
+      <section className="sm:flex">
         <figure className="relative">
           <img
             src={`/${
@@ -84,8 +88,8 @@ export default function Home() {
             </p>
           </figcaption>
         </figure>
-      </article>
-      <article className="py-12 bg-testimonialCream">
+      </section>
+      <section className="py-12 bg-testimonialCream">
         <h2 className="text-center text-grayBlue font-fraunces font-bold uppercase mb-20">
           Client Testimonials
         </h2>
@@ -114,8 +118,8 @@ export default function Home() {
             />
           </div>
         </div>
-      </article>
-      <article className="flex flex-wrap">
+      </section>
+      <section className="flex flex-wrap">
         <img
           src={`/${
             winWidth >= 640 ? "desktop" : "mobile"
@@ -140,7 +144,7 @@ export default function Home() {
           }/image-gallery-sugar-cubes.jpg`}
           className="w-1/2 sm:w-1/4"
         ></img>
-      </article>
+      </section>
       <footer className="py-10 bg-footerCyan text-footerTxt flex justify-center">
         <div className="max-w-prose">
           <div className="flex justify-center">
