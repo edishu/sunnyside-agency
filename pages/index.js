@@ -16,6 +16,19 @@ export default function Home() {
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
+      <article>
+        <figure className="relative">
+          <img
+            src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-header.jpg`}
+          ></img>
+          <figcaption className="absolute top-1/4 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <h1 className="text-4xl text-center uppercase text-white font-fraunces mb-20">
+              We Are Creatives
+            </h1>
+            <img src="/icon-arrow-down.svg"></img>
+          </figcaption>
+        </figure>
+      </article>
       <article className="sm:flex sm:flex-row-reverse">
         <img
           src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-transform.jpg`}
