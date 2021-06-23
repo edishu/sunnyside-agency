@@ -20,12 +20,14 @@ module.exports = {
         drkBlue: "hsl(198, 62%, 26%)",
         desatCayn: "hsl(167, 40%, 24%)",
         softRed: "hsl(7, 99%, 70%)",
-        brndYellow: "hsl(51, 100%, 49%)"
+        brndYellow: "hsl(51, 100%, 49%)",
+        heroBlue: "rgb(62,191,255)",
+        heroBlueLight: "#9edeff"
       }
     }
   },
   variants: {
-    extend: {}
+    extend: { backgroundColor: ["active"] }
   },
   plugins: []
 };

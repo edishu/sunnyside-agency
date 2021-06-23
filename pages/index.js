@@ -16,6 +16,36 @@ export default function Home() {
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
+      <nav className="bg-heroBlue px-6 pt-7 pb-3 flex justify-between items-center sticky top-0 z-50">
+        <img src="/logo.svg"></img>
+        <div>
+          <button
+            className="text-white font-barlow text-base
+           hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+           active:bg-heroBlueLight focus:outline-none"
+          >
+            About
+          </button>
+          <button
+            className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+          active:bg-heroBlueLight focus:outline-none"
+          >
+            Services
+          </button>
+          <button
+            className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+          active:bg-heroBlueLight focus:outline-none"
+          >
+            Projects
+          </button>
+          <button
+            className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+          active:bg-heroBlueLight focus:outline-none"
+          >
+            Contact
+          </button>
+        </div>
+      </nav>
       <section>
         <figure className="relative">
           <picture>
