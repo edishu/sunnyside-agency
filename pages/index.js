@@ -26,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
       <nav className="bg-heroBlue px-6 pt-6 pb-3 flex justify-between items-center sticky top-0 z-50">
-        <img src="/logo.svg"></img>
+        <img src="/logo.svg" alt="Sunnyside"></img>
         {winWidth >= 640 ? (
           <div>
             <button
@@ -107,7 +107,7 @@ export default function Home() {
             <h1 className="text-4xl text-center uppercase text-white font-fraunces mb-20">
               We Are Creatives
             </h1>
-            <img src="/icon-arrow-down.svg"></img>
+            <img src="/icon-arrow-down.svg" alt="Down arrow"></img>
           </figcaption>
         </figure>
       </section>
@@ -115,6 +115,7 @@ export default function Home() {
         <img
           src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-transform.jpg`}
           className="sm:w-1/2"
+          alt="Transform"
         ></img>
         <Feature
           heading="Transform your brand"
@@ -127,6 +128,7 @@ export default function Home() {
         <img
           src={`/${winWidth >= 640 ? "desktop" : "mobile"}/image-stand-out.jpg`}
           className="sm:w-1/2"
+          alt="Stand out"
         ></img>
         <Feature
           heading="Stand out to the right audience"
@@ -142,6 +144,7 @@ export default function Home() {
             src={`/${
               winWidth >= 640 ? "desktop" : "mobile"
             }/image-graphic-design.jpg`}
+            alt="Graphic design"
           ></img>
           <figcaption className="absolute top-2/3 sm:top-1/3 md:top-1/2 lg:top-2/3 text-center text-desatCayn mx-auto container">
             <h2 className="font-fraunces text-2xl mb-6">Graphic Design</h2>
@@ -157,6 +160,7 @@ export default function Home() {
             src={`/${
               winWidth >= 640 ? "desktop" : "mobile"
             }/image-photography.jpg`}
+            alt="Photography"
           ></img>
           <figcaption className="absolute top-2/3 sm:top-1/3 md:top-1/2 lg:top-2/3 text-center text-desatCayn mx-auto container">
             <h2 className="font-fraunces text-2xl mb-6">Photography</h2>
@@ -203,30 +207,34 @@ export default function Home() {
             winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-milkbottles.jpg`}
           className="w-1/2 sm:w-1/4"
+          alt="milkbottles"
         ></img>
         <img
           src={`/${
             winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-orange.jpg`}
           className="w-1/2 sm:w-1/4"
+          alt="orange"
         ></img>
         <img
           src={`/${
             winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-cone.jpg`}
           className="w-1/2 sm:w-1/4"
+          alt="cone"
         ></img>
         <img
           src={`/${
             winWidth >= 640 ? "desktop" : "mobile"
           }/image-gallery-sugar-cubes.jpg`}
           className="w-1/2 sm:w-1/4"
+          alt="sugar-cubes"
         ></img>
       </section>
       <footer className="py-10 bg-footerCyan text-footerTxt flex justify-center">
         <div className="max-w-prose">
           <div className="flex justify-center">
-            <img src="/logo-green.svg"></img>
+            <img src="/logo-green.svg" alt="Sunnyside"></img>
           </div>
           <div className="flex justify-center my-8">
             <span className="mx-4">About</span>
@@ -234,10 +242,18 @@ export default function Home() {
             <span className="mx-4">Projects</span>
           </div>
           <div className="flex justify-center mt-16 mb-8">
-            <img src="/icon-facebook.svg" className="mx-3"></img>
-            <img src="/icon-instagram.svg" className="mx-3"></img>
-            <img src="/icon-twitter.svg" className="mx-3"></img>
-            <img src="/icon-pinterest.svg" className="mx-3"></img>
+            <img src="/icon-facebook.svg" className="mx-3" alt="facebook"></img>
+            <img
+              src="/icon-instagram.svg"
+              className="mx-3"
+              alt="instagram"
+            ></img>
+            <img src="/icon-twitter.svg" className="mx-3" alt="twitter"></img>
+            <img
+              src="/icon-pinterest.svg"
+              className="mx-3"
+              alt="pinterest"
+            ></img>
           </div>
         </div>
       </footer>
@@ -248,7 +264,11 @@ export default function Home() {
 const ClientTestimony = ({ imgUrl, para, name, desig }) => {
   return (
     <div className="flex flex-col items-center">
-      <img src={imgUrl} className="rounded-full mb-10 w-24 h-24"></img>
+      <img
+        src={imgUrl}
+        className="rounded-full mb-10 w-24 h-24"
+        alt={name}
+      ></img>
       <p className="text-center text-drkGrayBlue font-bold mb-10 px-5">
         {para}
       </p>
