@@ -4,12 +4,15 @@ import { useCallback, useEffect, useState } from "react";
 export default function Home() {
   const [winWidth, setWinWidth] = useState();
   useEffect(() => {
+    setWinWidth(window.innerWidth);
+  }, []);
+  useEffect(() => {
     const handleResize = () => setWinWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, []);
 
   const [active, setActive] = useState(false);
   const toggle = useCallback(() => {
@@ -22,7 +25,7 @@ export default function Home() {
         <title>Sunnyside Agency</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
-      <nav className="bg-heroBlue px-6 pt-7 pb-3 flex justify-between items-center sticky top-0 z-50">
+      <nav className="bg-heroBlue px-6 pt-6 pb-3 flex justify-between items-center sticky top-0 z-50">
         <img src="/logo.svg"></img>
         {winWidth >= 640 ? (
           <div>
@@ -95,7 +98,7 @@ export default function Home() {
         <figure className="relative">
           <picture>
             <source
-              srcset="/desktop/image-header.jpg"
+              srcSet="/desktop/image-header.jpg"
               media="(min-width: 640px)"
             />
             <img src="/mobile/image-header.jpg" alt="Hero " />
