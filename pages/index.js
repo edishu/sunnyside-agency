@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   const [winWidth, setWinWidth] = useState();
@@ -10,6 +10,12 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   });
+
+  const [active, setActive] = useState(false);
+  const toggle = useCallback(() => {
+    setActive(val => !val);
+  });
+
   return (
     <div className="min-h-screen text-lg xl:mx-auto xl:container">
       <Head>
@@ -18,33 +24,72 @@ export default function Home() {
       </Head>
       <nav className="bg-heroBlue px-6 pt-7 pb-3 flex justify-between items-center sticky top-0 z-50">
         <img src="/logo.svg"></img>
-        <div>
-          <button
-            className="text-white font-barlow text-base
+        {winWidth >= 640 ? (
+          <div>
+            <button
+              className="text-white font-barlow text-base
            hover:rounded-full hover:bg-white hover:text-black px-6 py-2
            active:bg-heroBlueLight focus:outline-none"
-          >
-            About
-          </button>
-          <button
-            className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+            >
+              About
+            </button>
+            <button
+              className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
           active:bg-heroBlueLight focus:outline-none"
-          >
-            Services
-          </button>
-          <button
-            className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+            >
+              Services
+            </button>
+            <button
+              className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
           active:bg-heroBlueLight focus:outline-none"
-          >
-            Projects
-          </button>
-          <button
-            className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
+            >
+              Projects
+            </button>
+            <button
+              className="text-white font-barlow text-base hover:rounded-full hover:bg-white hover:text-black px-6 py-2
           active:bg-heroBlueLight focus:outline-none"
-          >
-            Contact
-          </button>
-        </div>
+            >
+              Contact
+            </button>
+          </div>
+        ) : (
+          <div className="relative">
+            <button className="focus:outline-none" onClick={toggle}>
+              <img src="/icon-hamburger.svg"></img>
+            </button>
+            {active && (
+              <div className="absolute top-full right-0 mt-4">
+                <div className="float-right triangle-b-r"></div>
+                <div className="bg-testimonialCream w-80 flex flex-col p-10 items-center">
+                  <button
+                    className="text-drkGrayBlue font-barlow hover:rounded-full
+                focus:bg-brndYellow focus:uppercase focus:font-fraunces focus:outline-none text-center py-2 w-1/2 my-1"
+                  >
+                    About
+                  </button>
+                  <button
+                    className="text-drkGrayBlue font-barlow hover:rounded-full
+                focus:bg-brndYellow focus:uppercase focus:font-fraunces  focus:outline-none text-center py-2 w-1/2 my-1"
+                  >
+                    Services
+                  </button>
+                  <button
+                    className="text-drkGrayBlue font-barlow hover:rounded-full
+                focus:bg-brndYellow focus:uppercase focus:font-fraunces focus:outline-none text-center py-2 w-1/2 my-1"
+                  >
+                    Projects
+                  </button>
+                  <button
+                    className="text-drkGrayBlue font-barlow hover:rounded-full
+                focus:bg-brndYellow focus:uppercase focus:font-fraunces focus:outline-none text-center py-2 w-1/2 my-1"
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </nav>
       <section>
         <figure className="relative">
